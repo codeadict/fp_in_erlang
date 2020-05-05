@@ -11,3 +11,7 @@
 ## 1.7
 
 * Did a simple excersise [first.erl](1.7/first.erl).
+
+## 1.8
+
+* Did another excersise for more complex expressions, multiple expressions in a function separated by comma, the last expression is the result of the function. Code at [first.erl](1.8/first.erl). When Erlang files compile, they generate a **.beam** file which is the machine code interpreted by the VM. 

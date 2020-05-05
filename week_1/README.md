@@ -6,4 +6,8 @@
 
 * In the shell one can create anonymous functions(lambdas) like `SumOfTwo = fun(A, B) -> A + B end.` and the evaluate like `SumOfTwo(10, 14).`.
 
-* To forget varaibale bindings in the shell, use `f(VariableName).` or `f().` to forget all. 
+* To forget varaibale bindings in the shell, use `f(VariableName).` or `f().` to forget all.
+
+## 1.7
+
+* Did a simple excersise [first.erl](1.7/first.erl).

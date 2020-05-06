@@ -19,3 +19,31 @@
 ## 1.9
 
 * This is the first excersise one has tho write without the professor writting it. My solution located at [first.erl](1.9/first.erl) and [second.erl](1.9/second.erl).
+
+## 1.10
+
+* Had some nice discussions about the complexity of pattern matching with diffferent data types, still unsure what the complexity for all the types is but got pointed to https://github.com/happi/theBeamBook by Brujo Benavides ( Thanks :) ). Learned that the algorithms used by Erlang are from the book _The implementation of functional programming languages_ by Simon Peyton Jones, where basically patterns are compiled down to decision trees (nested case statements). Also learned that these desicion trees can be seen by compiling to [Core Erlang](http://www.it.uu.se/research/group/hipe/cerl/) or Beam Assembly.
+Compiling to core Erlang can be done in the shell with:
+
+```erlang
+> c(yourmodule, to_core).
+```
+
+or 
+
+```console
+$ erlc +to_core yourmodule.erl
+```
+
+If you want see asm code of beam you can use the shell
+
+```erlang
+> c(yourmodule, 'S').
+```
+
+or
+
+```console
+$ erlc -S yourmodule.erl
+```
+

@@ -20,7 +20,7 @@
 
 * This is the first excersise one has tho write without the professor writting it. My solution located at [first.erl](1.9/first.erl) and [second.erl](1.9/second.erl).
 
-## 1.10
+## 1.10: Erlang data: Numbers and atoms
 
 * Had some nice discussions about the complexity of pattern matching with diffferent data types, still unsure what the complexity for all the types is but got pointed to https://github.com/happi/theBeamBook by Brujo Benavides ( Thanks :) ). Learned that the algorithms used by Erlang are from the book _The implementation of functional programming languages_ by Simon Peyton Jones, where basically patterns are compiled down to decision trees (nested case statements). Also learned that these desicion trees can be seen by compiling to [Core Erlang](http://www.it.uu.se/research/group/hipe/cerl/) or Beam Assembly.
 Compiling to core Erlang can be done in the shell with:
@@ -45,5 +45,18 @@ or
 
 ```console
 $ erlc -S yourmodule.erl
+```
+
+* Integers are `bignums`.
+* Different bases could be used with `base#number`: `> 2#100 = 4.`.
+* Operators: `+ - * / div rem`.
+* Booleans are just special atoms `true, false`.
+
+## 1.11: Erlang data: tuples, lists and functions
+
+* For tuples, it's a common idiom to use the first field to indicate the sort of data in the tuple.
+
+```erlang
+> {coordinates, {27.876492,-82.82442}}.
 ```
 

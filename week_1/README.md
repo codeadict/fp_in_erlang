@@ -48,8 +48,11 @@ $ erlc -S yourmodule.erl
 ```
 
 * Integers are `bignums`.
+
 * Different bases could be used with `base#number`: `> 2#100 = 4.`.
+
 * Operators: `+ - * / div rem`.
+
 * Booleans are just special atoms `true, false`.
 
 ## 1.11: Erlang data: tuples, lists and functions
@@ -60,3 +63,24 @@ $ erlc -S yourmodule.erl
 > {coordinates, {27.876492,-82.82442}}.
 ```
 
+* Lists and Tuples are similar collection of values that can have elements of different types. We have both because we can do different things with them, lists could be iterated and are built one element at the time and tuples are built in one go.
+
+* Strings are simply list of characters, both `"abc".` and `[97, 98, 99].` print as "abc". Useful to look at the ASCII table http://www.asciitable.com/index/asciifull.gif or we can prefix the character with $, like `[$a, $b, $c]`.
+
+* Functions can be data
+
+```erlang
+1> fun (X) -> X * 2 end.
+#Fun<erl_eval.7.126501267>
+```
+
+and can be arguments of other functions
+
+```erlang
+1> lists:map(fun (X) -> X * 2 end, [1, 2, 3, 4, 5]).
+[2,4,6,8,10]
+```
+
+And functions can return functions since they are values too.
+
+## 1.12:  Erlang data in practice

@@ -114,3 +114,5 @@ I personally was surprised with:
  - `false andalso (3 == (4 div 0)).` (Thought `andalso` behaved like `and`, turns that `and`/`or` evaluate both sides of the operator but `andalso`/`orelse` are short-circuit operators which will only evaluate the right-side argument if it needs to).
  
 * Some nice links that came from discussions are [8.14 Short-Circuit Expressions](https://erlang.org/doc/reference_manual/expressions.html) and https://medium.com/erlang-battleground/there-are-guards-and-guards-71e67d4975d7.
+
+## 1.13: Variables in Erlang

@@ -120,3 +120,32 @@ I personally was surprised with:
 * Variables are single assignment values in Erlang, once they are bound, the equal sign is just matching the values on the two sides. Folks discussed how Elixir uses variable shadowing and need to use the pin operator (^) for things like case statements.
 
 ## 1.14:  Pattern matching
+
+* Patterns get used in sequence when using the same function with different arguments, they get evaluated until the can match.
+
+```erlang
+is_zero(0) ->
+	true;
+is_zero(_X) ->
+	false.
+```
+
+Last function is used as a catch all. Example here with exclusive or (XOR): _You can choose pizza or pasta, but not both_
+
+```erlang
+xOr(true, false) ->
+	true;
+xOr(false, true) ->
+	true;
+xOr(_, _) ->  %% Catch all, _ matches any value 
+	false.
+```
+
+the same could be expressed simpler with
+
+```erlang
+xOr(X,X) ->  %% false if choosing both
+	false;
+xOr(_,_) ->
+	true.
+```

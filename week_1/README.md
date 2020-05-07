@@ -116,3 +116,5 @@ I personally was surprised with:
 * Some nice links that came from discussions are [8.14 Short-Circuit Expressions](https://erlang.org/doc/reference_manual/expressions.html) and https://medium.com/erlang-battleground/there-are-guards-and-guards-71e67d4975d7.
 
 ## 1.13: Variables in Erlang
+
+* Variables are single assignment values in Erlang, once they are bound, the equal sign is just matching the values on the two sides. Folks discussed how Elixir uses variable shadowing and need to use the pin operator (^) for things like case statements.

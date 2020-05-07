@@ -65,7 +65,7 @@ $ erlc -S yourmodule.erl
 
 * Lists and Tuples are similar collection of values that can have elements of different types. We have both because we can do different things with them, lists could be iterated and are built one element at the time and tuples are built in one go.
 
-* Strings are simply list of characters, both `"abc".` and `[97, 98, 99].` print as "abc". Useful to look at the ASCII table http://www.asciitable.com/index/asciifull.gif or we can prefix the character with $, like `[$a, $b, $c]`.
+* Strings are simply list of characters, both `"abc".` and `[97, 98, 99].` print as "abc". Useful to look at the ASCII table http://www.asciitable.com/index/asciifull.gif or we can prefix the character with $, like `[$a, $b, $c]`. For later study [3.5  Standard Unicode Representation](http://erlang.org/doc/apps/stdlib/unicode_usage.html#standard-unicode-representation), still unclear to me how are unicode strings represented fine in the shell but they are not list of ASCII anymore and rather list of Unicode code points. For example `erlang:iolist_to_binary/1` will work fine with "abc" but not with "döpe̊" where you need to use `unicode:characters_to_binary/1,2,3`. 
 
 * Functions can be data
 
@@ -84,3 +84,33 @@ and can be arguments of other functions
 And functions can return functions since they are values too.
 
 ## 1.12:  Erlang data in practice
+
+* Had to practice the following statements in the shell and guess the results before:
+
+```erlang
+not true.
+true and false.
+length([2,3,4,5]).
+[2,3]++[[4]].
+(fun (X) -> X+2 end)(40).
+fun (X) -> X+2 end(40).
+2#100.
+100#2.
+34#2.
+2#34.
+[97,98,99].
+[$h,$e,$l,$l,$o].
+[$h,$e,$l,$l,o].
+[34,3,5,36,37].
+[34,35,36,37].
+false and (3 == (4 div 0)).
+false andalso (3 == (4 div 0)).
+true orelse (3 == (4 div 0)).
+```
+
+I personally was surprised with:
+
+ - `[34,3,5,36,37].` (Thought 3 and 5 will be interpreted as ascii EXT and ENQ but turned it into an integer list because they are not ascii representable).
+ - `false andalso (3 == (4 div 0)).` (Thought `andalso` behaved like `and`, turns that `and`/`or` evaluate both sides of the operator but `andalso`/`orelse` are short-circuit operators which will only evaluate the right-side argument if it needs to).
+ 
+* Some nice links that came from discussions are [8.14 Short-Circuit Expressions](https://erlang.org/doc/reference_manual/expressions.html) and https://medium.com/erlang-battleground/there-are-guards-and-guards-71e67d4975d7.

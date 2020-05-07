@@ -118,3 +118,5 @@ I personally was surprised with:
 ## 1.13: Variables in Erlang
 
 * Variables are single assignment values in Erlang, once they are bound, the equal sign is just matching the values on the two sides. Folks discussed how Elixir uses variable shadowing and need to use the pin operator (^) for things like case statements.
+
+## 1.14:  Pattern matching

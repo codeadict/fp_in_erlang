@@ -149,3 +149,7 @@ xOr(X,X) ->  %% false if choosing both
 xOr(_,_) ->
 	true.
 ```
+
+## 1.15: Variables and patterns in practice
+
+* This chapter had three practice excercises for pattern matching and some calculations. My implementations are located on [pattern_match.erl](1.15/pattern_match.erl).

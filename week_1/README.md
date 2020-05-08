@@ -1,6 +1,6 @@
-# Week 1 Notes
+# Notes for Week 1: Getting started with Erlang
 
-## 1.5
+## 1.5: Using the Erlang system 
 
 * Erlang shell has some nice Emacs shortcuts. Most of them are outlined at https://github.com/erlang/otp/blob/504d151a57bc93acb3fb7597214a8e62be9c1cfd/lib/stdlib/src/edlin.erl#L186. MAybe write a blog post about these.
 
@@ -8,15 +8,15 @@
 
 * To forget varaibale bindings in the shell, use `f(VariableName).` or `f().` to forget all.
 
-## 1.7
+## 1.7: The basics of Erlang programming
 
 * Did a simple excersise [first.erl](1.7/first.erl).
 
-## 1.8
+## 1.8: Introducing more complicated functions
 
 * Did another excersise for more complex expressions, multiple expressions in a function separated by comma, the last expression is the result of the function. Code at [first.erl](1.8/first.erl). When Erlang files compile, they generate a **.beam** file which is the machine code interpreted by the VM. 
 
-## 1.9
+## 1.9: My first Erlang program article
 
 * This is the first excersise one has tho write without the professor writting it. My solution located at [first.erl](1.9/first.erl) and [second.erl](1.9/second.erl).
 

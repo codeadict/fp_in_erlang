@@ -79,7 +79,7 @@ Taking it even further: What is the general problem in n dimensions?
 
 ### My solutions
 
-Solutions are located on [2.3/recursion.er](2.3/recursion.erl).
+Solutions are located on [2.3/recursion.erl](2.3/recursion.erl).
 
 
 

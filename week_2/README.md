@@ -63,12 +63,12 @@ Basically, can be used like `F = fun Fac(0) -> 1; Fac(N) -> Fac(N-1) * N end.`.
 
 This chapter is about some recursion excersises to write in Erlang and do the calculations/reasoning by hand:
 
-#. Fibonacci numbers
+1. Fibonacci numbers
 
 The Fibonacci sequence is given by 0, 1, 1, 2, 3, 5, … where subsequent values are given by adding the two previous values in the sequence.
 Give a recursive definition of the function `fib/1` computing the Fibonacci numbers, and give a step-by-step evaluation of fib(4).
 
-#. How many pieces?
+2. How many pieces?
 
 Define a function `pieces` so that `pieces(N)` tells you the maximum number of pieces into which you can cut a piece of paper with N straight line cuts.
 

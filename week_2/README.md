@@ -13,7 +13,7 @@ factorial(N) ->
 	factorial(N - 1) * N.
 ```
 
-Hand Calculation:
+**Hand Calculation:**
 
 ```
 factorial(3)

@@ -9,8 +9,4 @@ My notes and exercise solutions while working through the course [Functional Pro
 
 ## Disclaimer
 
-The solution and notes on this repository are with the propose of learning myself and using my own interpretation of the classes and problem. You could use them for learning or to match with your own results but they should not be taken as correct.
-
-
-
-
+The solution and notes on this repository are with the propose of learning myself and using my personal interpretation of the classes and problems. You could use them for learning or to match with your results but they should not be taken as correct.

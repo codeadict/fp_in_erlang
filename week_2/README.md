@@ -59,3 +59,23 @@ Basically, can be used like `F = fun Fac(0) -> 1; Fac(N) -> Fac(N-1) * N end.`.
 
 * Recursion can be seen as executable specification because it gives a direct description of what it does.
 
+## 2.3  Recursion examples
+
+This chapter is about some recursion excersises to write in Erlang and do the calculations/reasoning by hand:
+
+#. Fibonacci numbers
+
+The Fibonacci sequence is given by 0, 1, 1, 2, 3, 5, … where subsequent values are given by adding the two previous values in the sequence.
+Give a recursive definition of the function `fib/1` computing the Fibonacci numbers, and give a step-by-step evaluation of fib(4).
+
+#. How many pieces?
+
+Define a function `pieces` so that `pieces(N)` tells you the maximum number of pieces into which you can cut a piece of paper with N straight line cuts.
+
+![pieces.png](2.3/pieces.png)
+
+If you’d like to take this problem further, think about the 3-dimensional case. Into how many pieces can you cut a wooden block with N saw cuts?
+Taking it even further: What is the general problem in n dimensions?
+
+
+

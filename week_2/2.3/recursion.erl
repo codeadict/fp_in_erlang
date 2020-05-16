@@ -98,7 +98,7 @@ test_pieces_3d() ->
     pass.
 
 %% General tests.
-%% Todo: test more than 3 dimensions.
+%% TODO: test more than 3 dimensions.
 test() ->
     pass = test_fibonacci(),
     pass = test_pieces_2d(),

@@ -39,6 +39,8 @@ fibonacci(N) when N > 2 ->
 %% * https://en.wikipedia.org/wiki/Lazy_caterer%27s_sequence
 pieces(0, _) ->  %% regardless of dimension, 0 cuts will always be one piece.
     1;
+pieces(_, 0) ->
+    1;
 pieces(1, _) -> %% one cut will always return 2 pieces
     2;
 pieces(Cuts, Dimension) when Cuts > 1 ->

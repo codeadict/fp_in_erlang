@@ -41,11 +41,11 @@ test_fibonacci() ->
     [?assertEqual(Expected, fibonacci(N), io:format("Failed on N=~p", [N])) || {N, Expected} <- NumFibMapping],
     pass.
 
-%% Determine the maximum number of pieces created by a given 
+%% Determine the maximum number of pieces created by a given
 %% number of slices, applied to a space of a given dimension.
 %%
 %% References:
-%% 
+%%
 %% * Robert Banks
 %%   Slicing Pizzas, Racing Turtles, and Further Adventures in Applied Mathematics
 %%   Princeton, 1999, ISBN13: 9780691059471
@@ -71,7 +71,7 @@ pieces_n_dimension(1, _Dimension) -> %% one cut will always return 2 pieces
 pieces_n_dimension(Cuts, Dimension) when Cuts > 1 ->
     pieces_n_dimension(Cuts - 1, Dimension - 1) + pieces_n_dimension(Cuts - 1, Dimension).
 
-%% Shortcut function for max number of pieces in a plane (2 dimensional). 
+%% Shortcut function for max number of pieces in a plane (2 dimensional).
 -spec pieces_2d(Cuts :: non_neg_integer()) -> pos_integer().
 pieces_2d(Cuts) ->
     pieces_n_dimension(Cuts, 2).
@@ -103,5 +103,3 @@ test() ->
     pass = test_fibonacci(),
     pass = test_pieces_2d(),
     pass = test_pieces_3d().
-
-
